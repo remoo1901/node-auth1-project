@@ -8,10 +8,10 @@ const db = require("./database/config")
 const userRouter = require("./users/users-router")
 
 const server = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 7000
 
 server.use(helmet())
-server.use(cor())
+server.use(cors())
 server.use(express.json())
 server.use(session({
     resave: false,
